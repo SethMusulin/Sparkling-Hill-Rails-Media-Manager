@@ -1,0 +1,13 @@
+header {
+    background: blue;
+    height: 150px;
+}
+
+#header_container {
+    margin: auto;
+    max-width: 980px;
+}
+
+h1 {
+    color: white;
+}
