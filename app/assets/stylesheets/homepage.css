@@ -22,6 +22,7 @@ header {
     font-size: 2em;
     width: 77%;
     float: left;
+    padding-left: 1em;
 }
 #navigation li {
     float: right;
@@ -37,16 +38,30 @@ section {
     background-color: #60BBD6;
     width: 100%;
 }
+
 #main_content {
     margin: auto;
-    width: 61.5em;
+    width: 58em;
+    padding: 3em 2em;
     background-color: #fff;
-    min-height: 530px;
+    min-height: 350px;
+    overflow: hidden;
 }
 
+.column{
+    float:left;
+    width: 50%;
+    background: #fff;
+    margin-top: 4em;
+}
 
-
-
+.column h2{
+    font-size: 2em;
+}
+.column a{
+    display: block;
+    margin: 1em 0;
+}
 
 footer{
     background: #000;
