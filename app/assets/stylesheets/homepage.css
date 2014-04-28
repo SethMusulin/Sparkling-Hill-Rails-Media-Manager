@@ -12,7 +12,7 @@ header {
 #header_container {
     margin: auto;
     padding-top:3.2em;
-    max-width: 980px;
+    width: 61.5em;
     overflow: hidden;
     height: 100%;
 }
@@ -24,7 +24,7 @@ header {
     float: left;
 }
 #navigation li {
-    float: left;
+    float: right;
     margin: 1em .25em 0;
     color: #fff;
 }
@@ -32,6 +32,22 @@ header {
     color: #fff;
     margin-right: .25em;
 }
+
+section {
+    background-color: #60BBD6;
+    width: 100%;
+}
+#main_content {
+    margin: auto;
+    width: 61.5em;
+    background-color: #fff;
+    min-height: 530px;
+}
+
+
+
+
+
 footer{
     background: #000;
     height: 6.25em;
@@ -43,3 +59,5 @@ footer{
     padding-top:2.2em;
     max-width: 980px;
 }
+
+
