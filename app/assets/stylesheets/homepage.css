@@ -1,5 +1,9 @@
+body {
+    font-family: 'Open Sans', 'sans-serif';
+}
+
 header {
-    background: blue;
+    background: #336699;
     height: 150px;
 }
 
