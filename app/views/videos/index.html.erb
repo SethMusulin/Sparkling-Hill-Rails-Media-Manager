@@ -1,2 +1,9 @@
 <h1>Videos</h1>
-<a href="/videos/new">New Video</a>
+
+<section>
+  <% @videos.each do |video| %>
+    <p class="url"><a href="/videos/<%= video.id %>"><%= video.url %></a></p>
+  <% end %>
+</section>
+
+<p><a href="/videos/new">New Video</a></p>

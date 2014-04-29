@@ -1,5 +1,6 @@
 <h2>Add a Video</h2>
 <form method="post" action="/videos">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
   <table class="newVideo">
     <tr>
       <td><label for="url">URL of Video</label></td>
