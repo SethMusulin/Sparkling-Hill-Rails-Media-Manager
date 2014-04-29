@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   get '/pictures', to: 'pictures#index'
 
-  get '/videos', to: 'videos#index'
+  resources :videos
 
 end
