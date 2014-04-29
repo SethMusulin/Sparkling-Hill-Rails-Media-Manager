@@ -1,0 +1,20 @@
+<% if @picture %>
+  <p>Picture successfully created!</p>
+<% end %>
+
+<div class="one_half">
+  <img src="<%= @picture.url %>"/>
+  <p><%= @picture.rating %> out of 5</p>
+</div>
+
+
+
+
+
+
+<div class="one_half">
+  <p><%= @picture.url %></p>
+  <p><%= @picture.description %></p>
+</div>
+
+

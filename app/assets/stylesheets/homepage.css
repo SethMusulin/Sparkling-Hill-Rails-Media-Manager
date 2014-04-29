@@ -75,4 +75,54 @@ footer{
     max-width: 980px;
 }
 
+/*-------------pictures------------------*/
+
+.one_half {
+    width: 450px;
+}
+
+.one_half {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+tr td:first-child {
+    width: 150px;
+}
+td {
+    padding:5px;
+    font-size: 20px;
+}
+td input,
+td textarea {
+    width: 300px;
+}
+
+.shortInput {
+    width: 150px;
+}
+input[type='submit'] {
+    width: 120px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 4px 3px 1px #444;
+    background: white;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.new_picture {
+    width: 100%;
+    margin-top: 2em;
+}
+#description_label {
+    vertical-align: top;
+}
+
 

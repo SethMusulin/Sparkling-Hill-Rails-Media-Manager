@@ -1,0 +1,27 @@
+
+
+<h1>Add a picture</h1>
+
+
+<%= form_for @picture do |f| %>
+
+  <table class="new_picture">
+    <tr>
+      <td><%= f.label :url %></td>
+      <td><%= f.text_field :url %></td>
+    </tr>
+    <tr>
+      <td id="description_label"><%= f.label :description %></td>
+      <td class="text_area_description"><%= f.text_area(:description, rows: 6) %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :rating %></td>
+      <td><%= f.text_field(:rating, class: "shortInput" )%></td>
+    </tr>
+    <tr>
+      <td><%= f.submit "Create Picture" %></td>
+    </tr>
+  </table>
+
+
+<% end %>
