@@ -22,4 +22,12 @@ ActiveRecord::Schema.define(version: 20140429174200) do
     t.string "rating"
   end
 
+  create_table "videos", force: true do |t|
+    t.string   "url",                     null: false
+    t.string   "description",             null: false
+    t.integer  "rating",      default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

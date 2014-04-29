@@ -47,6 +47,10 @@ section {
     min-height: 350px;
     overflow: hidden;
 }
+h2{
+    font-size: 2em;
+    padding-left: 5px;
+}
 
 .column{
     float:left;
@@ -55,9 +59,6 @@ section {
     margin-top: 4em;
 }
 
-.column h2{
-    font-size: 2em;
-}
 .column a{
     display: block;
     margin: 1em 0;
@@ -126,3 +127,38 @@ input[type='submit'] {
 }
 
 
+/* Video CSS */
+.newVideo{
+    width: 100%;
+    margin-top: 2em;
+}
+.newVideo input{
+    padding: 8px;
+    width: 40em;
+    margin-bottom: 2em;
+}
+.newVideo .textareaLabel{
+    vertical-align: top;
+}
+ textarea{
+    width: 41em;
+    height: 10em;
+    margin-bottom: 2em;
+    border: 1px solid #ccc;
+}
+.newVideo label{
+    padding: 5px;
+    width: 40em;
+}
+.newVideo .shortInput{
+    width: 15em;
+}
+#button{
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 5px 4px 3px 1px #444;
+    font-size: 14px;
+
+
+}
