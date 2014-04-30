@@ -1,17 +1,17 @@
-
-
-
-
 <section class="column">
-<iframe class="videoWrapper" src="http:<%= @video.url %>" frameborder="0"></iframe>
-<p>Rating: <%= @video.rating %> out of 5</p>
+  <p> <%= @message %></p>
+
+  <iframe class="videoWrapper" src="//www.youtube.com/embed/<%= @video_query %>" frameborder="0" allowfullscreen></iframe>
+  <p>Rating: <%= @video.rating %> out of 5</p>
 </section>
 
 <section class="column mediaShow">
   <p>
-    <%= @video.url %>
-    <a href="/vidoes/<%= @video.id %>/edit">(Edit)</a>
+    <a href="<%= @video.url %>"> <%= @video.url %></a>
+
+    <a href="/videos/<%= @video.id %>/edit">(Edit)</a>
   </p>
+
   <p class="comment"><%= @video.description %></p>
   <button id="button" class="delete">Delete Picture</button>
 </section>
