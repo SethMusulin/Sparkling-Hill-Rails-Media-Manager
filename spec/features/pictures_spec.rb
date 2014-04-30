@@ -2,7 +2,6 @@ require 'spec_helper'
 require 'capybara/rspec'
 
 feature 'Pictures manager' do
-
   scenario 'User can add a photo' do
     visit '/'
     within("#pictures") do
