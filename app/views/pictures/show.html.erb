@@ -2,19 +2,15 @@
   <p>Picture successfully created!</p>
 <% end %>
 
-<div class="one_half">
-  <img src="<%= @picture.url %>"/>
-  <p><%= @picture.rating %> out of 5</p>
-</div>
+<section class="column">
+  <p><img src="<%= @picture.url %>"/></p>
+  <p>Rating: <%= @picture.rating %> out of 5</p>
+</section>
 
-
-
-
-
-
-<div class="one_half">
+<section class="column mediaShow">
   <p><%= @picture.url %></p>
   <p><%= @picture.description %></p>
-</div>
+  <button id="button" class="delete">Delete Picture</button>
+</section>
 
 

@@ -47,6 +47,10 @@ section {
     min-height: 350px;
     overflow: hidden;
 }
+h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
 h2{
     font-size: 2em;
     padding-left: 5px;
@@ -85,81 +89,30 @@ footer{
     max-width: 980px;
 }
 
-/*-------------pictures------------------*/
-
-.one_half {
-    width: 450px;
-}
-
-.one_half {
-    position: relative;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    float: left;
-}
-
-h1 {
-    font-size: 30px;
-    padding-bottom: 20px;
-}
-tr td:first-child {
-    width: 150px;
-}
-td {
-    padding:5px;
-    font-size: 20px;
-}
-td input,
-td textarea {
-    width: 300px;
-}
-
-.shortInput {
-    width: 150px;
-}
-input[type='submit'] {
-    width: 120px;
-    border: 1px solid #ccc;
-    box-shadow: 5px 4px 3px 1px #444;
-    background: white;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 14px;
-}
-.new_picture {
-    width: 100%;
-    margin-top: 2em;
-}
-#description_label {
-    vertical-align: top;
-}
-
-
 /* Video CSS */
-.newVideo{
-    width: 100%;
+.newMedia{
     margin-top: 2em;
+    width: 100%;
 }
-.newVideo input{
+.newMedia input{
     padding: 8px;
     width: 40em;
     margin-bottom: 2em;
 }
-.newVideo .textareaLabel{
+.newMedia .textareaLabel{
     vertical-align: top;
 }
- textarea{
+.newMedia textarea{
     width: 41em;
     height: 10em;
     margin-bottom: 2em;
     border: 1px solid #ccc;
 }
-.newVideo label{
+.newMedia label{
     padding: 5px;
     width: 40em;
 }
-.newVideo .shortInput{
+.newMedia .shortInput{
     width: 15em;
 }
 .url{
@@ -173,13 +126,13 @@ input[type='submit'] {
     width: 25em;
     margin-bottom: 1em;
 }
-.column.videoShow p{
+.column.mediaShow p{
     margin-bottom: 2em;
 }
-.videoShow.delete{
+.mediaShow.delete{
     margin-top: 40em;
 }
-.videoShow a{
+.mediaShow a{
     padding-left: 1em;
 }
 .comment{
