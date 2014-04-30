@@ -1,6 +1,7 @@
 <h2>Add a Picture</h2>
 
 <%= form_for @picture do |f| %>
+
   <% if @picture %>
     <% if @picture.errors %>
       <% @picture.errors.messages.each do |_, v| %>
@@ -8,6 +9,7 @@
       <% end %>
     <% end %>
   <% end %>
+
   <table class="newMedia">
     <tr>
       <td><%= f.label "URL of picture" %></td>

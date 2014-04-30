@@ -62,6 +62,9 @@ h2{
     color: #E31212;
     margin: 10px 0 0
 }
+.clearFloat{
+    clear: both;
+}
 .column{
     float:left;
     width: 50%;
@@ -96,7 +99,7 @@ footer{
     max-width: 980px;
 }
 
-/* Video CSS */
+/* Media new and show CSS */
 .newMedia{
     margin: 2em 10px 0 0;
     width: 100%;
@@ -146,3 +149,10 @@ footer{
 }
 form{margin-top: 40px;}
 
+/* pictures */
+#photoGallery p img{
+    float: left;
+    height: 10em;
+    width: 10em;
+    margin: .8em;
+}

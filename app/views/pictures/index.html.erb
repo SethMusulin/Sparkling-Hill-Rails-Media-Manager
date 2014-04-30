@@ -1,3 +1,10 @@
-<h2>Pictures</h2>
+<section id="photoGallery">
+  <% @pictures.each do |picture| %>
+    <p>
+      <a href="pictures/<%= picture[:id] %>"><img src="<%= picture[:url] %>"></a>
+    </p>
 
-<p><a href="/pictures/new">New Picture</a></p>
+  <%end%>
+</section>
+
+<p class="clearFloat"><a href="/pictures/new">New Picture</a></p>
