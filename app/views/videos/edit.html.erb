@@ -1,0 +1,28 @@
+<h2>Edit a Video</h2>
+<form method="post" action="/videos/<%= @video.id %>">
+  <input type ="hidden" name="_method" value="patch">
+  <% if @video %>
+    <% if @video.errors %>
+      <% @video.errors.full_messages.each do |message| %>
+        <p class="error"><%= message %></p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
+  <table class="newMedia">
+    <tr>
+      <td><label for="url">URL of Video</label></td>
+      <td><input type="text" name="url" value="<%=@video.url%>" autofocus="autofocus"></td>
+    </tr>
+    <tr>
+      <td class="textareaLabel"><label for="description">Short Description</label></td>
+      <td><textarea name="description"><%=@video.description%></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="Rating">Rating</label></td>
+      <td><input type="text" name="rating" value="<%=@video.rating%>" class="shortInput"></td>
+    </tr>
+  </table>
+  <input type="submit" value="Update Video" id="button">
+</form>

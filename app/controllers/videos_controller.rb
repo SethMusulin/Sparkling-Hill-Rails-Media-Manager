@@ -26,5 +26,21 @@ class VideosController < ApplicationController
     params = CGI::parse(url)
     @video_query = params["v"].first
   end
+
+  def edit
+    @video = Video.find(params[:id])
+  end
+
+  def update
+    @video = Video.find(params[:id])
+    @video.url = params[:url]
+    @video.description = params[:description]
+    @video.rating = params[:rating]
+    if @video.save
+      redirect_to "/videos/#{@video.id}", :flash => { :success => "Video Successfully Updated!" }
+    else
+      render update
+    end
+  end
 end
 

@@ -46,30 +46,42 @@ feature 'Video management' do
     expect(page).to have_content("Description can't be blank")
   end
 
-  scenario "user sees error message when creating video without URL" do
-    visit '/'
-    within("#videos") do
-      click_on 'View All'
+  context 'create video' do
+    before(:each) do
+      visit '/'
+      within("#videos") do
+        click_on 'View All'
+      end
+      click_on 'New Video'
     end
-    click_on 'New Video'
-    fill_in 'description', with: "Tarkan"
-    click_on 'Create Video'
-    expect(page).to have_content("Url can't be blank")
-  end
-
-  scenario 'user should see the link for all the videos' do
-    visit '/'
-    within('#videos') do
-      click_on 'Add New'
+    scenario "user sees error message when creating video without URL" do
+      fill_in 'description', with: "Tarkan"
+      click_on 'Create Video'
+      expect(page).to have_content("Url can't be blank")
     end
-    fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
-    fill_in 'description', with: "People Are Awesome"
-    click_on 'Create Video'
-    expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
 
-    visit '/'
-    click_on 'all videos'
-    expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
+    scenario 'user should see the link for all the videos' do
+      fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
+      fill_in 'description', with: "People Are Awesome"
+      click_on 'Create Video'
+      expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
+
+      visit '/'
+      click_on 'all videos'
+      expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
+    end
+
+    scenario 'user should be able to see an edit form for a video' do
+      fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
+      fill_in 'description', with: "People Are Awesome"
+      click_on 'Create Video'
+      click_on "Edit"
+      fill_in 'description', with: "Awesome Are People"
+      click_on "Update Video"
+      expect(page).to have_content "Awesome Are People"
+      expect(page).to_not have_content "People Are Awesome"
+      expect(page).to have_content 'Video Successfully Updated'
+
+    end
   end
-
 end
