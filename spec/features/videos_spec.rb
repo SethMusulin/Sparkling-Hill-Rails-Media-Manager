@@ -57,5 +57,19 @@ feature 'Video management' do
     expect(page).to have_content("Url can't be blank")
   end
 
+  scenario 'user should see the link for all the videos' do
+    visit '/'
+    within('#videos') do
+      click_on 'Add New'
+    end
+    fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
+    fill_in 'description', with: "People Are Awesome"
+    click_on 'Create Video'
+    expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
+
+    visit '/'
+    click_on 'all videos'
+    expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
+  end
 
 end
