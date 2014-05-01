@@ -4,8 +4,8 @@
 
   <% if @picture %>
     <% if @picture.errors %>
-      <% @picture.errors.messages.each do |_, v| %>
-        <p class="error"><%= v.first %></p>
+      <% @picture.errors.full_messages.each do |message| %>
+        <p class="error"><%= message %></p>
       <% end %>
     <% end %>
   <% end %>
