@@ -63,9 +63,8 @@ feature 'Video management' do
     scenario 'user should see the link for all the videos' do
       fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
       fill_in 'description', with: "People Are Awesome"
+      fill_in 'rating', with: 3
       click_on 'Create Video'
-      expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
-
       visit '/'
       click_on 'all videos'
       expect(page).to have_content('https://www.youtube.com/watch?v=H6WRZ8iBQzQ')
@@ -74,6 +73,7 @@ feature 'Video management' do
     scenario 'user should be able to see an edit form for a video' do
       fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
       fill_in 'description', with: "People Are Awesome"
+      fill_in 'rating', with: 3
       click_on 'Create Video'
       click_on "Edit"
       fill_in 'description', with: "Awesome Are People"
@@ -81,7 +81,14 @@ feature 'Video management' do
       expect(page).to have_content "Awesome Are People"
       expect(page).to_not have_content "People Are Awesome"
       expect(page).to have_content 'Video Successfully Updated'
+    end
 
+    scenario 'User cant rate a video higher than 5 or less than 0' do
+      fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
+      fill_in 'description', with: "People Are Awesome"
+      fill_in 'rating', with: "zmldhvkjlasgdflka"
+      click_on 'Create Video'
+      # expect(page).to have_content("Url can't be blank")
     end
   end
 end

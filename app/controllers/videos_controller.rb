@@ -39,7 +39,7 @@ class VideosController < ApplicationController
     if @video.save
       redirect_to "/videos/#{@video.id}", :flash => { :success => "Video Successfully Updated!" }
     else
-      render update
+      render "/videos/#{@video.id}/edit"
     end
   end
 end
