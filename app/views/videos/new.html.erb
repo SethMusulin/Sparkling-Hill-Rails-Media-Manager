@@ -3,7 +3,7 @@
   <% if @video %>
       <% if @video.errors %>
           <% @video.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
+              <p class="error"><%= message %></p>
           <% end %>
       <% end %>
   <% end %>
