@@ -14,6 +14,6 @@
     <a href="/videos/<%= @video.id %>/edit">(Edit)</a>
   </p>
 
-  <p class="comment"><%= @video.description %></p>
+  <p class="comment"><%= simple_format @video.description %></p>
   <button id="button" class="delete">Delete Picture</button>
 </section>
