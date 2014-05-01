@@ -8,7 +8,7 @@
 <section class="column mediaShow">
   <p><%= @picture.url %> <a href="/pictures/<%= @picture.id %>/edit">(Edit)</a></p>
   <p><%= simple_format @picture.description %></p>
-  <button id="button" class="delete">Delete Picture</button>
+  <%=link_to "Delete Picture", picture_path(@picture), method: :delete, id: "button", class: "delete"%>
 </section>
 
 

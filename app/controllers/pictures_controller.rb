@@ -37,4 +37,12 @@ class PicturesController < ApplicationController
     end
   end
 
+  def destroy
+    id = params[:id]
+    @picture = Picture.find(id)
+    @picture.destroy
+
+    redirect_to pictures_path, :flash => { :success => "Picture Successfully Deleted!" }
+  end
+
 end

@@ -81,6 +81,7 @@ h2{
     background: #fff;
     box-shadow: 5px 4px 3px 1px #444;
     font-size: 14px;
+    text-decoration:none;
 }
 #button.delete{
     background: #cc0000;
