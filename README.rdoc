@@ -1,28 +1,18 @@
-== README
+== Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application allows the user to manage media.
 
-Things you may want to cover:
+To get this application running locally, you should be able to simply clone this repository and run the following:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+     cd Sparkling-Hill-Rails-Media-Manager
+     bundle install
+     rake db:create
+     rake db:migrate
+     rails s
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Staging:        http://shrouded-savannah-7626.herokuapp.com/
+
+Production:     http://sleepy-fjord-4731.herokuapp.com/
+
+pivotalTracker: https://www.pivotaltracker.com/n/projects/1069206
