@@ -14,7 +14,7 @@ feature 'Pictures manager' do
     expect(page).to have_css("img")
     expect(page).to have_content("Critter Babbies")
     expect(page).to have_content("5")
-    expect(page).to have_content("Picture successfully created!")
+    expect(page).to have_content("Picture Successfully Created!")
   end
 end
 
