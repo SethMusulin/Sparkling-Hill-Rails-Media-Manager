@@ -15,5 +15,5 @@
   </p>
 
   <p class="comment"><%= @video.description %></p>
-  <button id="button" class="delete">Delete Picture</button>
+  <%=link_to "Delete Video", video_path(@video), method: :delete, id: "button", class: "delete"%>
 </section>

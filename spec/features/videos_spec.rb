@@ -90,5 +90,15 @@ feature 'Video management' do
       click_on 'Create Video'
       # expect(page).to have_content("Url can't be blank")
     end
+
+    scenario 'user can delete a video' do
+      fill_in 'url', with: "https://www.youtube.com/watch?v=H6WRZ8iBQzQ"
+      fill_in 'description', with: "People Are Awesome"
+      fill_in 'rating', with: 3
+      click_on 'Create Video'
+      click_on 'Delete Video'
+      expect(page).to have_content("Video Successfully Deleted")
+      expect(page).to_not have_content("https://www.youtube.com/watch?v=H6WRZ8iBQzQ")
+    end
   end
 end
