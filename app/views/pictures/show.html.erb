@@ -1,9 +1,7 @@
-<% if @picture %>
-  <p>Picture successfully created!</p>
-<% end %>
+
 
 <section class="column">
-  <p><img src="<%= @picture.url %>"/></p>
+  <p class="pictureWrapper"><img src="<%= @picture.url %>"/></p>
   <p>Rating: <%= @picture.rating %> out of 5</p>
 </section>
 

@@ -2,6 +2,13 @@
 
 <%= form_for @picture do |f| %>
 
+  <% if @picture %>
+    <% if @picture.errors %>
+      <% @picture.errors.full_messages.each do |message| %>
+        <p class="error"><%= message %></p>
+      <% end %>
+    <% end %>
+  <% end %>
 
   <table class="newMedia">
     <tr>

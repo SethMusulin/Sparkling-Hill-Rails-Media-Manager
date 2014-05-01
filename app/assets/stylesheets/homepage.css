@@ -1,22 +1,19 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
-body {
+body{
     font-family: 'Open Sans', 'sans-serif';
 }
-
-header {
+header{
     background: #336699;
     height: 9.5em;
 }
-
-#header_container {
+#header_container{
     margin: auto;
     padding-top:3.2em;
     width: 61.5em;
     overflow: hidden;
     height: 100%;
 }
-
 #header_container h1{
     color: white;
     font-size: 2em;
@@ -24,7 +21,7 @@ header {
     float: left;
     padding-left: 1em;
 }
-#navigation li {
+#navigation li{
     float: right;
     margin: 1em .25em 0;
     color: #fff;
@@ -33,13 +30,19 @@ header {
     color: #fff;
     margin-right: .25em;
 }
-
-section {
+section{
     background-color: #60BBD6;
     width: 100%;
 }
-
-#main_content {
+.flash_success{
+    color: #1B961F;
+    background: #9FD6A0;
+    padding: .5em;
+    text-align: center;
+    margin: auto;
+    width: 61em;
+}
+#main_content{
     margin: auto;
     width: 58em;
     padding: 3em 2em;
@@ -47,13 +50,20 @@ section {
     min-height: 350px;
     overflow: hidden;
 }
-h1 {
+h1{
     font-size: 30px;
     padding-bottom: 20px;
 }
 h2{
     font-size: 2em;
     padding-left: 5px;
+}
+.error{
+    color: #E31212;
+    margin: 10px 0 0
+}
+.clearFloat{
+    clear: both;
 }
 .column{
     float:left;
@@ -83,15 +93,15 @@ footer{
     color: #fff;
     vertical-align: bottom;
 }
-#footer_container {
+#footer_container{
     margin: auto;
     padding-top:2.2em;
     max-width: 980px;
 }
 
-/* Video CSS */
+/* Media new and show CSS */
 .newMedia{
-    margin-top: 2em;
+    margin: 2em 10px 0 0;
     width: 100%;
 }
 .newMedia input{
@@ -120,7 +130,7 @@ footer{
     background: #fff;
     font-size: 14px;
 }
-.videoWrapper{
+.videoWrapper, .pictureWrapper img{
     height: 15em;
     width: 25em;
     margin-bottom: 1em;
@@ -137,4 +147,12 @@ footer{
 .comment{
     height: 150px;
 }
+form{margin-top: 40px;}
 
+/* pictures */
+#photoGallery p img{
+    float: left;
+    height: 10em;
+    width: 10em;
+    margin: .8em;
+}
