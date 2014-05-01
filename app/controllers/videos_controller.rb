@@ -14,25 +14,33 @@ class VideosController < ApplicationController
     @video.description = params[:description]
     @video.rating = params[:rating]
     if @video.save
-      session[:id] = @video.id
-      redirect_to "/videos/#{@video.id}"
+      redirect_to "/videos/#{@video.id}", :flash => { :success => "Video Successfully Created!" }
     else
       render "/videos/new"
     end
-
-
-
   end
 
   def show
-    if session[:id]
-      @message = "Video successfully created"
-    end
     @video = Video.find(params[:id])
     url = URI(@video.url).query
     params = CGI::parse(url)
     @video_query = params["v"].first
-    session.clear
+  end
+
+  def edit
+    @video = Video.find(params[:id])
+  end
+
+  def update
+    @video = Video.find(params[:id])
+    @video.url = params[:url]
+    @video.description = params[:description]
+    @video.rating = params[:rating]
+    if @video.save
+      redirect_to "/videos/#{@video.id}", :flash => { :success => "Video Successfully Updated!" }
+    else
+      render update
+    end
   end
 end
 
