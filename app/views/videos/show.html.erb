@@ -8,12 +8,7 @@
 </section>
 
 <section class="column mediaShow">
-  <p>
-    <a href="<%= @video.url %>"> <%= @video.url %></a>
-
-    <a href="/videos/<%= @video.id %>/edit">(Edit)</a>
-  </p>
-
-  <p class="comment"><%= simple_format @video.description %></p>
+  <p><%= @video.url %><a href="/videos/<%= @video.id %>/edit">(Edit)</a></p>
+  <p><%= simple_format @video.description %></p>
   <%=link_to "Delete Video", video_path(@video), method: :delete, id: "button", class: "delete"%>
 </section>
