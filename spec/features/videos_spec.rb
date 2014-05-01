@@ -88,7 +88,7 @@ feature 'Video management' do
       fill_in 'description', with: "People Are Awesome"
       fill_in 'rating', with: "zmldhvkjlasgdflka"
       click_on 'Create Video'
-      # expect(page).to have_content("Url can't be blank")
+      expect(page).to have_content("Rating must be between 0 and 5")
     end
 
     scenario 'user can delete a video' do
