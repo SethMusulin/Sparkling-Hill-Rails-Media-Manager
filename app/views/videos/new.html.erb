@@ -1,6 +1,13 @@
 <h2>Add a Video</h2>
-
 <form method="post" action="/videos">
+  <% if @video %>
+      <% if @video.errors %>
+          <% @video.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+      <% end %>
+  <% end %>
+
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
   <table class="newMedia">
     <tr>

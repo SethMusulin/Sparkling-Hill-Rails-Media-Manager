@@ -13,10 +13,15 @@ class VideosController < ApplicationController
     @video.url = params[:url]
     @video.description = params[:description]
     @video.rating = params[:rating]
-    @video.save
+    if @video.save
+      session[:id] = @video.id
+      redirect_to "/videos/#{@video.id}"
+    else
+      render "/videos/new"
+    end
 
-    session[:id] = @video.id
-    redirect_to "/videos/#{@video.id}"
+
+
   end
 
   def show

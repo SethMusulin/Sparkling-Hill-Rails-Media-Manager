@@ -17,7 +17,7 @@ feature 'Video management' do
     end
     scenario "user clicks 'View All'" do
       visit '/'
-      within(".videos") do
+      within("#videos") do
         click_on 'View All'
       end
       click_on 'New Video'
@@ -33,5 +33,19 @@ feature 'Video management' do
       click_on "https://www.youtube.com/watch?v=jaMZ4lyteH0"
       expect(page).to_not have_content 'Video successfully created'
     end
+  end
+
+  scenario "user sees erorr messages when creating video without URL or Descripton" do
+    visit '/'
+    within("#videos") do
+      click_on 'View All'
+    end
+    click_on 'New Video'
+    fill_in 'description', with: "Tarkan"
+    click_on 'Create Video'
+    expect(page).to have_content("Url can't be blank")
+    fill_in 'url', with: 'https://www.youtube.com/watch?v=jaMZ4lyteH0'
+    click_on 'Create Video'
+    expect(page).to have_content("Description can't be blank")
   end
 end
