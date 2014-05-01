@@ -28,7 +28,7 @@ feature 'Video management' do
       expect(page).to have_content('https://www.youtube.com/watch?v=jaMZ4lyteH0')
       expect(page).to have_content '5'
       expect(page).to have_content 'Tarkan'
-      expect(page).to have_content 'Video successfully created'
+      expect(page).to have_content 'Video Successfully Created'
       click_on "all videos"
       click_on "https://www.youtube.com/watch?v=jaMZ4lyteH0"
       expect(page).to_not have_content 'Video successfully created'
