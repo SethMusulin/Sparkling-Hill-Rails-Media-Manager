@@ -22,7 +22,19 @@ class PicturesController < ApplicationController
     @picture = Picture.find(id)
   end
 
-  def strong_params
-
+  def edit
+    id = params[:id]
+    @picture = Picture.find(id)
   end
+
+  def update
+    id = params[:id]
+    @picture = Picture.find(id)
+      if @picture.update(url: params[:picture][:url], description: params[:picture][:description], rating: params[:picture][:rating])
+      redirect_to "/pictures/#{id}", :flash => { :success => "Picture Successfully Updated!" }
+    else
+      render :edit
+    end
+  end
+
 end

@@ -6,8 +6,8 @@
 </section>
 
 <section class="column mediaShow">
-  <p><%= @picture.url %></p>
-  <p><%= @picture.description %></p>
+  <p><%= @picture.url %> <a href="/pictures/<%= @picture.id %>/edit">(Edit)</a></p>
+  <p><%= simple_format @picture.description %></p>
   <button id="button" class="delete">Delete Picture</button>
 </section>
 
