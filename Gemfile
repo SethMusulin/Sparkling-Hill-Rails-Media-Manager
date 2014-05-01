@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'travis-lint', '~> 1.8.0'
+
 gem 'rails_12factor', '~> 0.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
