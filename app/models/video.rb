@@ -1,6 +1,8 @@
 class Video < ActiveRecord::Base
 
-  validates :url, presence: true
+  validates :url, :format => {:with => /\A(http|https):\/\/.+/,
+    :message => "must be valid"}
+
 
   validates :description, presence: true
 

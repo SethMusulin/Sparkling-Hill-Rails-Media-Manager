@@ -56,8 +56,9 @@ feature 'Video management' do
     end
     scenario "user sees error message when creating video without URL" do
       fill_in 'description', with: "Tarkan"
+      fill_in 'rating', with: "5"
       click_on 'Create Video'
-      expect(page).to have_content("Url can't be blank")
+      expect(page).to have_content("Url must be valid")
     end
 
     scenario 'user should see the link for all the videos' do

@@ -1,5 +1,7 @@
 class Picture < ActiveRecord::Base
-  validates :url, presence: true
+  validates :url, :format => {:with => /\A(http|https):\/\/.+(gif|png|jpeg|jpg)/,
+                              :message => "must be valid"}
+
   validates :description, presence: true
 
   validates :rating, numericality: {
